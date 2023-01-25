@@ -1,10 +1,11 @@
 import React from 'react'
-
 import './variables.css'
 import './global.css'
 import Seo from './seo'
 import Navigation from './navigation'
 import Footer from './footer'
+import * as styles from './layout.module.css'
+
 class Template extends React.Component {
   render() {
     const { children } = this.props
@@ -13,7 +14,7 @@ class Template extends React.Component {
       <>
         <Seo />
         <Navigation />
-        <main>{children}</main>
+        <main className={styles.mainBody}>{children}</main>
         <Footer />
       </>
     )
